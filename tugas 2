@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int bilangan, hasil = 0;
+
+    // Meminta input dari user
+    cout << "Masukan bilangan: ";
+    cin >> bilangan;
+    cout << bilangan;
+
+    // Memeriksa apakah bilangan genap atau ganjil
+    if (bilangan % 2 == 0) {
+        // Bilangan genap
+        for (int i = bilangan; i >= 2; i -= 2) {
+            cout << " - " << i;
+            hasil -= i;
+        }
+    } else {
+        // Bilangan ganjil
+        for (int i = bilangan; i >= 1; i -= 2) {
+            cout << " - " << i;
+            hasil -= i;
+        }
+    }
+
+    cout << " = " << hasil << endl;
+
+    return 0;
+}
