@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int i, N, jumlah = 0;
+    float rata_rata;
+    i = 1;
+
+    cout << "Masukan banyak nilai: ";
+    cin >> N;
+
+    cout << "Jumlah: ";
+    while (i <= N) {
+        cout << i * 7;
+        if (i < N) {
+            cout << " + ";
+        }
+        jumlah = jumlah + (i * 7);
+        i++;
+    }
+
+    cout << " = " << jumlah << endl;
+
+    // Menghitung rata-rata
+    rata_rata = (float)jumlah / N;
+    cout << "Rata-rata: " << jumlah << " / " << N << " = " << rata_rata << endl;
+
+    return 0;
+}
